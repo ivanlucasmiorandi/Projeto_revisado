@@ -5,7 +5,7 @@ body {
   color: #444444; 
   margin: 0;
   padding: 0 0 60px 0; /* espaço para o footer fixo */
-  background-image: url(./imagem/Plano_de_fundo/GoClimaBackground.jpg);
+  background-image: url(../img/Plano_de_fundo/GoClimaBackground.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -341,3 +341,17 @@ footer a:hover {
   }
 }
 
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;  /* mantém no centro */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;     /* quase a tela toda */
+  /* max-width: 1600px; se quiser limitar em telas muito grandes */
+  height: 100vh;   /* mais alto também */
+  border: none;
+  border-radius: 6px;
+}
