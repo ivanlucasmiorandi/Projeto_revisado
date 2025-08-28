@@ -36,19 +36,21 @@ body {
   display: flex;
   align-items: center;
   background-color: #3D3B3A;
-  padding: 10px 20px;
+  padding: 2px 15px; /* antes 5px 20px */
+  justify-content: space-between;
+  height: 50px; /* força altura mais baixa */
 }
 
 .navbar .menu {
   display: flex;
   gap: 10px;
-  margin-left: auto;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
-  padding: 14px 20px;
+  padding: 6px 10px; /* antes 14px 20px */
+  font-size: 14px;   /* diminui fonte pra caber mais fino */
 }
 
 .navbar a:hover {
@@ -59,14 +61,15 @@ body {
 /* ====== CONTEÚDO PRINCIPAL ====== */
 main {
   max-width: 960px;
-  margin: 20px auto;
-  padding: 0 20px;
+  margin: 0px auto;
+  padding: 0 0px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   color: rgb(207, 91, 13);
   text-align: center;
+  justify-content: center;
 }
 
 p {
@@ -82,7 +85,7 @@ p {
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .tab-button {
@@ -121,23 +124,47 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .tab-dias {
-  padding: 25px 40px;
+  width: 250px;        /* mesma largura p/ todos */
+  height: 130px;       /* mesma altura p/ todos */
+  padding: 15px;
   border: none;
   background: linear-gradient(135deg, #fff8dc, #ffe4b5);
-  color: #3308cec2;
+  color: #333333;
   font-weight: bold;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(51, 8, 206, 0.3);
-  text-decoration: none; /* remove sublinhado */
+  text-align: center;
+
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center; /* centraliza tudo verticalmente */
+  gap: 2px; /* espaço entre itens */
+}
+
+.tab-dias strong {
+  font-size: 1.1em;
+  color: #4e31b8;
+  text-transform: capitalize; /* terça-feira bonitinho */
+}
+
+.tab-dias .temp {
+  font-size: 1em;
+  color: #444;
+}
+
+.tab-dias img {
+  width: 60px;
+  height: 60px;
 }
 
 .tab-dias:hover {
@@ -159,7 +186,7 @@ footer {
   color: #0f0f0f;
   text-align: center;
   width: 100%;
-  padding: 10px 0;
+  padding: 5px 0;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -240,7 +267,7 @@ footer a:hover {
 }
 
 
-.login-section {
+/* .login-section {
   padding: 50px 20px;
   display: flex;
   justify-content: center;
@@ -275,17 +302,17 @@ footer a:hover {
 
 .login-container button:hover {
   background-color: #0056b3;
-}
+} */
 
-#message {
+/* #message {
   color: red;
   margin-top: 10px;
-}
+} */
 
-/* ====== CONTAINER DO LOGIN ====== */
+/* ====== CONTAINER DO LOGIN ====== 
 .login-container {
   max-width: 400px;
-  margin: 80px auto; /* centralizado e afastado do topo */
+  margin: 80px auto; 
   padding: 40px;
   background-color: #ffffff;
   border-radius: 12px;
@@ -294,13 +321,13 @@ footer a:hover {
   font-family: Arial, sans-serif;
 }
 
-/* Título do formulário */
+/* Título do formulário 
 .login-container h2 {
   margin-bottom: 30px;
   color: #007bff;
 }
 
-/* Inputs */
+/* Inputs 
 .login-container input {
   width: 100%;
   padding: 12px;
@@ -310,7 +337,7 @@ footer a:hover {
   font-size: 16px;
 }
 
-/* Botão */
+/* Botão 
 .login-container button {
   width: 100%;
   padding: 12px;
@@ -325,7 +352,7 @@ footer a:hover {
 
 .login-container button:hover {
   background-color: #0056b3;
-}
+}*/
 
 /* Mensagem de erro ou sucesso */
 #message {
@@ -342,16 +369,24 @@ footer a:hover {
 }
 
 .iframe-wrapper {
-  display: flex;
-  justify-content: center;  /* mantém no centro */
-  width: 100%;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1445px; /* opcional */
+    margin: 0 auto;
+    height: 600px;     /* altura visível */
+    overflow: hidden;  /* corta o resto */
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden; 
 }
 
 .iframe-wrapper iframe {
-  width: 100%;     /* quase a tela toda */
-  /* max-width: 1600px; se quiser limitar em telas muito grandes */
-  height: 100vh;   /* mais alto também */
-  border: none;
-  border-radius: 6px;
+    position: absolute;
+    top: -400px;   /* ajusta para “rolar” o site */
+    left: 0;
+    width: 100%;
+    height: 2000px;  /* bem maior que o wrapper */
+    border: none;
+    border-radius: 0; /* tira curva interna pra não cortar estranho */
 }

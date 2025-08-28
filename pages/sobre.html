@@ -5,27 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - GoClima</title>
   <link rel="stylesheet" href="../css/styles.css"> <!-- Importa CSS do site -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #87ceeb, #f0f8ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    main {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9); /* Caixa branca translúcida */
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.2); /* Sombra bonita */
+    }
+
+    h2 {
+      text-align: center;
+      color: #004d66;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
   <main>
     <section id="sobre-goclima">
-  <div class="container">
-    <h2>Sobre o GoClima</h2>
-    <p>
-      O GoClima é a plataforma ideal para quem busca aproveitar ao máximo seus momentos de lazer. 
-      Nossa missão é conectar você a eventos e atividades que realmente combinam com seu estilo.
-    </p>
-    <p>
-      Como funciona? Basta se cadastrar, definir suas preferências e informar sua localização. 
-      A partir disso, nosso sistema exibe eventos próximos a você, indicando o clima no horário da atividade 
-      e sugerindo opções ao ar livre ou cobertas, sempre alinhadas aos seus interesses.
-    </p>
-    <p>
-      Com o GoClima, encontrar o evento perfeito ou descobrir novas experiências nunca foi tão fácil e intuitivo.
-    </p>
-  </div>
-</section>
-
+      <div class="container">
+        <h2>Sobre o GoClima</h2>
+        <p>
+          O GoClima é a plataforma ideal para quem busca aproveitar ao máximo seus momentos de lazer. 
+          Nossa missão é conectar você a eventos e atividades que realmente combinam com seu estilo.
+        </p>
+        <p>
+          Como funciona? Basta se cadastrar, definir suas preferências e informar sua localização. 
+          A partir disso, nosso sistema exibe eventos próximos a você, indicando o clima no horário da atividade 
+          e sugerindo opções ao ar livre ou cobertas, sempre alinhadas aos seus interesses.
+        </p>
+        <p>
+          Com o GoClima, encontrar o evento perfeito ou descobrir novas experiências nunca foi tão fácil e intuitivo.
+        </p>
+      </div>
+    </section>
   </main>
 
   <script src="../api/script.js"></script>

@@ -16,39 +16,51 @@
       <div class="logo">
         <h1>GoClima</h1>
       </div>
+      <div class="eventos">
+        <a href="eventos_ao_ar_livre.html" class="tab-button active">Ao ar livre</a>
+        <a href="eventos_fechados.html" class="tab-button">Fechado</a>
+        <a href="eventos_gratuitos.html" class="tab-button">Gratuitos</a>
+        <a href="eventos_pagos.html" class="tab-button">Pagos</a>
+      </div>
       <div class="menu">
         <a href="index.html">Home</a>
         <a href="contato.html">Contato</a>
-        <a href="login.html">Login</a>
+        <!--<a href="login.html">Login</a>-->
       </div>
     </nav>
   </header>
 
-  <nav class="menu-botoes">
-    <a href="eventos_ao_ar_livre.html" class="tab-button active">Ao ar livre</a>
-    <a href="eventos_fechados.html" class="tab-button">Fechado</a>
-    <a href="eventos_gratuitos.html" class="tab-button">Gratuitos</a>
-    <a href="eventos_pagos.html" class="tab-button">Pagos</a>
-  </nav>
+  <!-- ====== MENU DE DIAS (Cards de previsão do tempo) ====== -->
+  <div class="menu-dias">
+    <button class="tab-dias"></button>
+    <button class="tab-dias"></button>
+    <button class="tab-dias"></button>
+    <button class="tab-dias"></button>
+    <button class="tab-dias"></button>
+  </div>
 
-  <main>
-    <h1>Eventos ao ar livre</h1>
-        <div class="iframe-wrapper">
-          <iframe src="https://destinopoa.com.br/calendario/" 
-                  frameborder="0"></iframe>
-        </div>
-  </main>
+  <h1>Eventos ao ar livre</h1>
+  <div class="iframe-wrapper">
+    <iframe src="https://destinopoa.com.br/lugares/ver-fazer/locais-de-interesse/natureza-e-parques/"
+            frameborder="0"></iframe>
+  </div>
 
+  <!-- ====== RODAPÉ ====== -->
   <footer>
     <div class="footer-container">
       <div class="footer-links">
-        <a href="index.html">Home</a> |
-        <a href="#">Política de Privacidade</a> |
-        <a href="contato.html">Contato</a>
+        <a href="termos_de_serviço.html" target="_blank">Termos de Serviço</a> | 
+        <a href="#">Política de Privacidade</a> | 
+        <a href="contato.html">Contato</a> | 
+        <a href="sobre.html">Sobre</a>
       </div>
     </div>
   </footer>
 
+  <!-- ====== SCRIPT ====== -->
+  <script src="../api/script.js"></script>
+  <script>
+    getWeather(); // chama assim que carregar a página
+  </script>
 </body>
-
 </html>
